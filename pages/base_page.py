@@ -3,12 +3,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class BasePage:
-    def __init__(self, driver):
-        self.driver = driver
-        self.base_page = 'http://localhost/litecart/en/'
 
-    def open_base_page(self):
-        self.driver.get(self.base_page)
 
     def find_element(self, locator: tuple, time=10):
         return WebDriverWait(self.driver, time).until(
