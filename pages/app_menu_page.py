@@ -24,9 +24,10 @@ class RegionalSettingsPage(BasePage):
         )
         country_change_button.click()
 
-    def check_country(self, country):
+    def should_be_country(self):
         country_text = self.find_element(RegionalSettingsPageLocator.LOCATOR_COUNTRY_SELECT_BUTTON).text
-        assert country_text == country, f'Country on regional setting page {country_text} is not eq {country}'
+        check_text = "Belarus"
+        assert country_text == check_text, f'Text on UI {country_text} is not eq {check_text}'
 
     def should_be_currency(self):
         currency_text = self.find_element(RegionalSettingsPageLocator.LOCATOR_CURRENCY_SELECT_BUTTON).text

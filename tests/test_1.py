@@ -1,5 +1,5 @@
 from pages.main_page import MainPage
-from pages.regional_settings_page import RegionalSettingsPage
+from pages.app_menu_page import RegionalSettingsPage
 from time import sleep
 
 
