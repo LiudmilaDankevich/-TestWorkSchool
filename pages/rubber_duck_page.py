@@ -25,4 +25,12 @@ class RubberDuckPage(BasePage):
             RubberDuckPageLocator.LOCATOR_ADD_TO_CART_BUTTON
         )
         add_to_cart.click()
+        sleep(5)
+
+    def click_cart(self):
+        click_cart_order = self.find_element(
+            RubberDuckPageLocator.LOCATOR_CURT_BUTTON
+        )
+        click_cart_order.click()
+
 

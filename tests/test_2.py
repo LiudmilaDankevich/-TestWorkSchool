@@ -17,11 +17,15 @@ def test_buy_ducks_in_the_store(browser):
     sleep(2)
     duck.change_the_number_of_duck('3')
     duck.click_add_to_cart()
-    # cart_page = CartPage(browser)
+    duck.click_cart()
+
+    cart_page = CartPage(browser)
     # cart_page.click_cart()
-    # cart_page.should_be_quantity_duck()
-    # sleep(2)
+    # cart_page
+    cart_page.should_be_quantity_duck()
+    sleep(2)
     # cart_page.should_be_sum_duck()
+    cart_page.click_confirm_order()
 
 
 
