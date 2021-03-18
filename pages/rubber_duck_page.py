@@ -16,16 +16,13 @@ class RubberDuckPage(BasePage):
         )
         change_the_number_of_duck.click()
         change_the_number_of_duck.clear()
-        sleep(2)
         change_the_number_of_duck.send_keys(number)
-        sleep(3)
 
     def click_add_to_cart(self):
         add_to_cart = self.find_element(
             RubberDuckPageLocator.LOCATOR_ADD_TO_CART_BUTTON
         )
         add_to_cart.click()
-        sleep(5)
 
     def click_cart(self):
         click_cart_order = self.find_element(
