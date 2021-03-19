@@ -15,17 +15,14 @@ def test_buy_ducks_in_the_store(browser):
     duck.choose_duck()
     duck.change_the_number_of_duck('3')
     duck.click_add_to_cart()
-    sleep(2)
     duck.click_cart()
-
+    sleep(5)
     cart_page = CartPage(browser)
-    # cart_page.click_cart()
-    # cart_page
     cart_page.should_be_quantity_duck()
     # cart_page.should_be_cost_duck()
     cart_page.click_confirm_order()
-    # data_base = DataBase()
-    # data_base.connect()
+    # connect = DataBase()
+    # connect.find_order_in_the_base()
 
 
 
