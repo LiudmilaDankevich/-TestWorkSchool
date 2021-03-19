@@ -1,6 +1,7 @@
 import requests
 
 
+
 class PetstorePet:
 
     def get_headers(self):
