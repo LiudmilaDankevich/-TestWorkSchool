@@ -1,4 +1,5 @@
 import requests
+import json
 
 
 
@@ -36,7 +37,7 @@ class PetstorePet:
             "status": "available"
         }
         response = requests.request("POST", url, json=json)
-        json_response = response, json()
+        json_response = response.json()
         assert json_response['code'] == 200, f'{json_response["code"]} not equal code 200'
         print('created')
         return json_response
@@ -62,7 +63,7 @@ class PetstorePet:
             "status": "available"
         }
         response = requests.request("GET", url, json=json)
-        json_response = response, json()
+        json_response = response.json()
         assert json_response['code'] == 200, f'{json_response["code"]} not equal code 200'
         print('get')
         return json_response
@@ -88,7 +89,7 @@ class PetstorePet:
             "status": "available"
         }
         response = requests.request('DELETE', url, json=json)
-        json_response = response, json()
+        json_response = response.json()
         assert json_response['code'] == 200, f'{json_response["code"]} not equal code 200'
         print('deleted')
         return json_response
@@ -114,7 +115,7 @@ class PetstorePet:
             "status": "available"
         }
         response = requests.request("GET", url, json=json)
-        json_response = response, json()
+        json_response = response.json()
         assert json_response['code'] == 404, f'{json_response["code"]} not equal code 404'
         print('No')
         return json_response

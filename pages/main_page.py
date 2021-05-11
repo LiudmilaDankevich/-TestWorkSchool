@@ -14,5 +14,3 @@ class MainPage(BasePage):
 
 
 
-    def get_closes_name_on_the_page(self):
-        pass
