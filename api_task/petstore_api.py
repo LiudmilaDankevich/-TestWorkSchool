@@ -119,4 +119,5 @@ class PetstorePet:
         assert json_response['code'] == 404, f'{json_response["code"]} not equal code 404'
         print('No')
         return json_response
+PetstorePet()
 
