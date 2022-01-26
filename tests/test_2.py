@@ -23,8 +23,8 @@ def test_buy_ducks_in_the_store(browser):
     # cart_page.should_be_cost_duck()
     cart_page.click_confirm_order()
     # База данных не проходит в дженкинсе, тест падает
-    # connect = DataBase()
-    # connect.check_order_by_id()
+    connect = DataBase()
+    connect.check_order_by_id()
 
 
 
