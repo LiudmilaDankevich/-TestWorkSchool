@@ -17,7 +17,7 @@ def test_buy_ducks_in_the_store(browser):
     duck.change_the_number_of_duck('3')
     duck.click_add_to_cart()
     duck.click_cart()
-    sleep(5)
+    sleep(1)
     cart_page = CartPage(browser)
     cart_page.should_be_quantity_duck()
     # cart_page.should_be_cost_duck()
